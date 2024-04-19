@@ -10,13 +10,13 @@ the package version must match the current keycloak version exported
 ## Install
 
 ```shell
-npm i @cognativinc/keycloak-admin-client
+npm i @cognativ-inc/keycloak-admin-client
 ```
 
 ## Usage
 
 ```ts
-import { KeycloakAdminClient } from '@cognativinc/keycloak-admin-client';
+import { KeycloakAdminClient } from '@cognativ-inc/keycloak-admin-client';
 
 @Injectable()
 export class KeycloakAdminService {
