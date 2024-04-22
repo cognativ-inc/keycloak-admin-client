@@ -10,12 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-      
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
         with:
-          node-version: 20.5.0 #use the compatable version for the application
-          registry-url: 'https://registry.npmjs.org'
+          node-version: 16
+      - run: npm ci
 
   publish-gpr:
     needs: build
@@ -26,16 +23,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
         with:
-          node-version: 20.5.0 #use the compatable version for the application
-          registry-url: 'https://registry.npmjs.org'
-          
-          # registry-url: https://npm.pkg.github.com/
-      - run: |
-          npm install
-          npm ci
-          npm publish
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
