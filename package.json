@@ -1,6 +1,6 @@
 {
 	"name": "@cognativ-inc/keycloak-admin-client",
-	"version": "23.0.4",
+	"version": "24.0.3",
 	"description": "Migration from Modules to CJS of Keycloak Admin Client",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -15,7 +15,7 @@
 	},
 	"author": "SamSafeNull",
 	"dependencies": {
-	  "@keycloak/keycloak-admin-client": "23.0.4"
+	  "@keycloak/keycloak-admin-client": "24.0.3"
 	},
 	"devDependencies": {
 		"esbuild": "0.20.2"
