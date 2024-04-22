@@ -26,9 +26,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: 20
-          registry-url: https://npm.pkg.github.com/
+          node-version: 20.5.0 #use the compatable version for the application
+          registry-url: 'https://registry.npmjs.org'
+          
+          # registry-url: https://npm.pkg.github.com/
       - run: |
           npm install
           npm ci
